@@ -1,430 +1,248 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizzaria Planeta – A melhor pizza da galáxia</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizzaria Planeta - A Melhor da Galáxia</title>
 
-    <!-- SEO Básico -->
+  <!-- SEO Básico -->
     <meta name="description"
-          content="Pizzaria Planeta oferece pizzas artesanais, massas finas e ingredientes frescos. Delivery rápido e ambiente familiar.">
-    <meta name="author" content="Pizzaria Planeta">
+          content="Pizzaria Planeta - A Melhor da Galáxia">
+    <meta name="author" content="DevStudio - Websites e Automação em Atendimento Online">
 
     <!-- Favicon -->
     <link rel="icon" href="/images/pizz-logo.png" type="image/png">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="/styles/global.css">
-    <link rel="stylesheet" href="/styles/hero.css">
-    <link rel="stylesheet" href="/styles/menu.css">
-    <link rel="stylesheet" href="/styles/about.css">
-    <link rel="stylesheet" href="/styles/local.css">
-    <link rel="stylesheet" href="/styles/footer.css">
-    <link rel="stylesheet" href="/styles/responsive.css">
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/hero.css">
+  <link rel="stylesheet" href="styles/services.css">
+  <link rel="stylesheet" href="styles/about.css">
+  <link rel="stylesheet" href="styles/local.css">
+  <link rel="stylesheet" href="styles/testimonials.css">
+  <link rel="stylesheet" href="styles/chatbot.css">
+  <link rel="stylesheet" href="styles/footer.css">
+  <link rel="stylesheet" href="styles/responsive.css">
 
-    <style>
-        /* ── STICKY HEADER ── */
-        .site-header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            background: rgba(246, 0, 0, 0.953);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
-            transition: background 0.3s ease, box-shadow 0.3s ease;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        .site-header.scrolled {
-            background: rgba(247, 92, 36, 0.97);
-            box-shadow: 0 2px 30px rgba(0, 0, 0, 0.6);
-        }
-
-        .header-inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0.9rem 1.5rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        /* push page content below fixed header */
-        body {
-            padding-top: 64px;
-        }
-
-        /* ── NAV LINKS ── */
-        .nav ul {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .nav ul li a {
-            color: #f0e6d3;
-            text-decoration: none;
-            font-size: 0.95rem;
-            letter-spacing: 0.04em;
-            transition: color 0.2s;
-        }
-
-        .nav ul li a:hover {
-            color: #fffb20;
-        }
-
-        /* ── HAMBURGER BUTTON ── */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 5px;
-            width: 40px;
-            height: 40px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 6px;
-            border-radius: 6px;
-            transition: background 0.2s;
-            z-index: 1100;
-        }
-
-        .hamburger:hover {
-            background: rgba(255, 122, 32, 0.15);
-        }
-
-        .hamburger span {
-            display: block;
-            width: 24px;
-            height: 2px;
-            background: #f0e6d3;
-            border-radius: 2px;
-            transition: transform 0.35s cubic-bezier(.4,0,.2,1),
-                        opacity 0.25s ease,
-                        width 0.3s ease;
-            transform-origin: center;
-        }
-
-        /* open state → X */
-        .hamburger.open span:nth-child(1) {
-            transform: translateY(7px) rotate(45deg);
-        }
-        .hamburger.open span:nth-child(2) {
-            opacity: 0;
-            width: 0;
-        }
-        .hamburger.open span:nth-child(3) {
-            transform: translateY(-7px) rotate(-45deg);
-        }
-
-  /* ───────── MOBILE NAV ───────── */
-@media (max-width: 768px) {
-
-    .hamburger {
-        display: flex;
-        position: relative;
-        z-index: 2000;
-    }
-
-    .header-inner {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .logo {
-        color: #f0e6d3;
-        font-size: 1.2rem;
-        font-weight: 700;
-    }
-
-    .nav {
-
-        position: absolute;
-
-        top: 100%;
-        left: 0;
-
-        width: 100%;
-
-        background: rgba(246, 0, 0, 0.98);
-
-        padding: 1rem 0;
-
-        display: none;
-
-        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    }
-
-    .nav.open {
-        display: block;
-    }
-
-    .nav ul {
-
-        display: flex;
-        flex-direction: column;
-
-        gap: 0.5rem;
-
-        margin: 0;
-        padding: 0 1rem;
-
-        list-style: none;
-    }
-
-    .nav ul li a {
-
-        display: block;
-
-        padding: 1rem;
-
-        border-radius: 10px;
-
-        background: rgba(255,255,255,0.08);
-
-        color: #f0e6d3;
-
-        text-align: center;
-
-        text-decoration: none;
-
-        font-weight: 600;
-    }
-}
-        /* ── WHATSAPP BUTTON ── */
-        .btn-whatsapp {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.55rem;
-            background: #25d366;
-            color: #fff;
-            font-size: 1rem;
-            font-weight: 700;
-            letter-spacing: 0.02em;
-            padding: 0.8rem 1.8rem;
-            border-radius: 50px;
-            text-decoration: none;
-            transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35);
-        }
-
-        .btn-whatsapp:hover {
-            background: #1fba58;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 28px rgba(37, 211, 102, 0.5);
-        }
-
-        .btn-whatsapp:active {
-            transform: translateY(0);
-        }
-
-        .btn-whatsapp svg {
-            flex-shrink: 0;
-        }
-
-        /* Hero button group */
-        .hero-buttons {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-
-        /* Menu CTA wrapper */
-        .menu-cta {
-            display: flex;
-            justify-content: center;
-            margin-top: 2.5rem;
-        }
-    </style>
-</head>
+  </head>
 
 <body>
-    <!-- HEADER -->
-    <header class="site-header" id="site-header">
-        <div class="container header-inner">
-            <h2 class="logo">Pizzaria Planeta</h2>
 
-            <!-- Hamburger (mobile only) -->
-            <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+  <header>
 
-            <nav class="nav" id="main-nav">
-                <ul>
-                    <li><a href="#home"    class="nav-link">Início</a></li>
-                    <li><a href="#menu"    class="nav-link">Cardápio</a></li>
-                    <li><a href="#about"   class="nav-link">Sobre</a></li>
-                    <li><a href="#local" class="nav-link">Localização</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <nav class="navbar">
 
-    <!-- HERO -->
-    <section id="home" class="hero">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
+    <h2 class="logo">Pizzaria Planeta</h2>
 
-            <img src="/images/pizz-logo.png" alt="Logo Pizzaria Planeta" class="hero-logo">
+    <div class="menu-toggle">
 
-            <h1>Pizzaria Planeta</h1>
-            <p>Sabores que orbitam seu paladar</p>
+      ☰
+      
+    </div>
 
-            <div class="hero-buttons">
-                <a href="#menu" class="btn-primary">Veja o Cardápio</a>
+    <ul class="menu">
 
-                <a href="https://wa.me/5571999999999?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20na%20Pizzaria%20Planeta%20🍕"
-                   target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
-                    <!-- WhatsApp icon -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                    </svg>
-                    Fazer Pedido pelo WhatsApp
-                </a>
-            </div>
+       <li><a href="#inicio">Início</a></li>
 
-        </div>
-    </section>
+       <li><a href="#servicos">Cardápio</a></li>
 
-    <!-- CARDÁPIO -->
-    <section id="menu" class="menu-section">
-        <div class="container">
-            <h2>Nosso Cardápio</h2>
-            <div class="menu-grid">
-                <article class="menu-item">
-                    <h3>Margherita</h3>
-                    <p>Molho de tomate, muçarela fresca, manjericão e azeite extra virgem.</p>
-                    <span class="price">R$ 35,00</span>
-                </article>
+       <li><a href="#sobre">Sobre Nós</a></li>
 
-                <article class="menu-item">
-                    <h3>Calabresa Premium</h3>
-                    <p>Calabresa artesanal, cebola roxa, azeitonas pretas e orégano.</p>
-                    <span class="price">R$ 38,00</span>
-                </article>
+       <li><a href="#depoimentos">Depoimentos</a></li>
 
-                <article class="menu-item">
-                    <h3>Quatro Queijos</h3>
-                    <p>Muçarela, provolone, gorgonzola e parmesão. Uma explosão cremosa.</p>
-                    <span class="price">R$ 42,00</span>
-                </article>
+       <li><a href="#local">Localização</a></li>
 
-                <article class="menu-item">
-                    <h3>Portuguesa</h3>
-                    <p>Presunto, ovo, cebola, pimentão e azeitonas verdes.</p>
-                    <span class="price">R$ 40,00</span>
-                </article>
+    </ul>
 
-                <article class="menu-item">
-                    <h3>Veggie Especial</h3>
-                    <p>Berinjela grelhada, abobrinha, tomate seco, rúcula e queijo de cabra.</p>
-                    <span class="price">R$ 39,00</span>
-                </article>
+  </nav>
 
-                <article class="menu-item">
-                    <h3>Chocolate & Morango</h3>
-                    <p>Pizza doce com chocolate meio amargo, morangos frescos e chantilly.</p>
-                    <span class="price">R$ 36,00</span>
-                </article>
-            </div>
+</header>
 
-            <!-- WhatsApp CTA após o último card -->
-            <div class="menu-cta">
-                <a href="https://wa.me/5571999999999?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20na%20Pizzaria%20Planeta%20🍕"
-                   target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                    </svg>
-                    Fazer Pedido pelo WhatsApp
-                </a>
-            </div>
-        </div>
-    </section>
+  <section class="hero" id="inicio">
 
-    <!-- SOBRE NÓS -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <h2>Sobre a Pizzaria Planeta</h2>
-            <p>
-                Fundada em 2024, a Pizzaria Planeta nasceu da paixão por
-                ingredientes de alta qualidade e da vontade de levar ao
-                cliente uma experiência gastronômica que transcende o
-                cotidiano. Nossas massas são preparadas diariamente,
-                fermentadas por 48h, e assadas em forno a lenha para
-                garantir a crocância perfeita.
-            </p>
-            <p>
-                Além do tradicional, inovamos com combinações autorais,
-                sempre respeitando o equilíbrio de sabores. Seja no
-                salão aconchegante ou no conforto da sua casa, entregamos
-                a mesma dedicação em cada fatia.
-            </p>
-        </div>
-    </section>
+  <img src="images/pizz-logo.png" alt="Logo DevStudio" class="hero-logo">  
 
-    <!-- CONTATO -->
-    <section id="local" class="local-section">
-        <div class="container">
-            <h2>Localização</h2>
-            
-            <p>R. Adelaíde Fernandes da Costa, 205</p>
-            <p>Costa Azul, Salvador/BA</p>
+  <h1>Pizzaria Planeta</h1>
 
-            <div class="map-placeholder">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d944.6015304302573!2d-38.44817379486019!3d-12.997914371855849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7161b7407d360a7%3A0xa68a41a8f284ceee!2sR.%20Adela%C3%ADde%20Fernandes%20da%20Costa%2C%20205%20-%20Costa%20Azul%2C%20Salvador%20-%20BA%2C%2041760-040!5e1!3m2!1spt-BR!2sbr!4v1779167912369!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-    </section>
+  <p>
+    Sabores que orbitam seu paladar
+  </p>
 
-    <!-- FOOTER -->
-    <footer class="site-footer">
-        <div class="container footer-inner">
-            <p>2026 DevStudio – Todos os direitos reservados.</p>
-        </div>
-    </footer>
+  <div class="hero-buttons">
+  
+  <a href="https://wa.me/5571982905351" target="_blank">
+    <button>Peça pelo WhatsApp</button>
+  </a>
 
-    <!-- JS -->
-    <script src="/script.js"></script>
+  </div>
 
-    <script>
-        // ── Sticky header shadow on scroll ──
-        const header = document.getElementById('site-header');
-        window.addEventListener('scroll', () => {
-            header.classList.toggle('scrolled', window.scrollY > 20);
-        }, { passive: true });
+  </section>
 
-        // ── Hamburger menu toggle ──
-        const hamburger = document.getElementById('hamburger');
-        const mainNav   = document.getElementById('main-nav');
+<section class="services" id="servicos">
 
-        hamburger.addEventListener('click', () => {
-            const isOpen = hamburger.classList.toggle('open');
-            mainNav.classList.toggle('open', isOpen);
-            hamburger.setAttribute('aria-expanded', isOpen);
-            // prevent body scroll while nav is open
-            document.body.style.overflow = isOpen ? 'hidden' : '';
-        });
+  <h2>Nosso Cardápio</h2>
 
-        // Close nav when a link is clicked (mobile)
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('open');
-                mainNav.classList.remove('open');
-                hamburger.setAttribute('aria-expanded', 'false');
-                document.body.style.overflow = '';
-            });
-        });
-    </script>
+  <div class="cards">
+
+    <div class="card">
+      <h3>Margherita</h3>
+
+      <p>
+        Molho de tomate, muçarela fresca, manjericão e azeite extra virgem.
+      </p>
+
+      <h3>R$ 35,00</h3>
+    </div>
+
+    <div class="card">
+      <h3>Calabresa Premium</h3>
+
+      <p>
+        Calabresa artesanal, cebola roxa, azeitonas pretas e orégano.
+      </p>
+
+      <h3>R$ 38,00</h3>
+    </div>
+
+    <div class="card">
+      <h3>Quatro Queijos</h3>
+
+      <p>
+        Muçareça, provolone, gorgonzola, e parmesão. Uma explosão cremosa.
+      </p>
+
+      <h3>R$ 42,00</h3>
+    </div>
+
+    <div class="card">
+      <h3>Portuguesa</h3>
+
+      <p>
+        Presunto, ovo, pimentão e azeitonas verdes.
+      </p>
+
+      <h3>R$ 40,00</h3>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="about" id="sobre">
+
+  <div class="about-content">
+
+    <h2>Sobre a Pizzaria</h2>
+
+    <p>
+      Além do Tradicional, inovamos com combinações autorais, 
+      sempre respeitando o equilíbrio de sabores.
+      Seja em nosso Salão, ou no conforto da sua casa,
+      entregamos a mesma dedicação em cada fatia da nossa Pizza.
+    </p>
+
+  </div>
+
+</section>
+
+<section class="local" id="local">
+
+    <h2>Localização</h2>
+
+    <p>
+      Rua Hélio Machado, 
+      Boca do Rio, Salvador
+    </p>
+
+    <!-- Mapa estático (placeholder) -->
+    <div class="map-placeholder">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d353.8517941663441!2d-38.43304208313765!3d-12.979655486039407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7161bad81f9f569%3A0xc1391c26493976fa!2sR.%20H%C3%A9lio%20Machado%20-%20Boca%20do%20Rio%2C%20Salvador%20-%20BA%2C%2041710-200!5e1!3m2!1spt-BR!2sbr!4v1779169009617!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+</section>
+
+<section class="testimonials" id="depoimentos">
+
+  <h2>Depoimentos</h2>
+
+  <div class="testimonial-cards">
+
+    <div class="testimonial">
+
+      <p>
+        "Excelente! Comemos até empanturrar!"
+      </p>
+
+      <h3>Jonny Bravo</h3>
+
+    </div>
+
+    <div class="testimonial">
+
+      <p>
+        "Melhor pizza da cidade!"
+      </p>
+
+      <h3>Álvaro Azevedo</h3>
+
+    </div>
+
+    <div class="testimonial">
+
+      <p>
+        "Atendimento ágil, recebi minha pizza em menos de 10 minutos. Estava deliciosa!"
+      </p>
+
+      <h3>Cláudia Santos</h3>
+
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+
+  <p>
+    © 2026 DevStudio - Todos os direitos reservados.
+  </p>
+
+</footer>
+
+<!-- CHATBOT -->
+<div class="chatbot-button" id="chatbot-button">
+  💬
+</div>
+
+<div class="chatbot-container" id="chatbot-container">
+
+  <div class="chatbot-header">
+    <h3>Atendimento Virtual 🤖</h3>
+    <span id="close-chat">✖</span>
+  </div>
+
+  <div class="chatbot-messages" id="chatbot-messages">
+
+    <div class="message bot">Olá, eu sou o Atendente Virtual da Pizzaria Planeta<br>
+      <br>Me pergunte sobre:<br>
+      <br>• Nossa localização<br>
+      <br>• Como ver o nosso Cardápio<br>
+      <br>• Como fazer o seu pedido<br>
+    </div>
+
+  </div>
+
+  <div class="chatbot-input-area">
+    <input type="text" id="chat-input" placeholder="Digite sua mensagem...">
+    <button id="send-chat">Enviar</button>
+  </div>
+
+</div>
+
+  <script src="script.js"></script>
+
 </body>
 </html>

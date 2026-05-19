@@ -1,16 +1,43 @@
-/* ==== Contact ==== */
-.contact-section a {
-    color: var(--cor-secundaria);
-    text-decoration: none;
+.local {
+  padding: 100px 100px;
+
+  background: #ffe482;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
 }
-.contact-section a:hover {
-    text-decoration: underline;
+
+.local h2 {
+  font-size: 40px;
+
+  margin-bottom: 20px;
+
+  color: #ff0000;
 }
+
+.local p {
+  font-size: 20px;
+
+  line-height: 1.8;
+
+  color: #ff0000;
+
+  text-align: center;
+
+  margin-bottom: 10px;
+}
+
 .map-placeholder {
-    margin-top: 2rem;
-    text-align: center;
+  width: 100%;
+  max-width: 1000px;
 }
-.map-placeholder img {
-    max-width: 100%;
-    border-radius: 8px;
+
+.map-placeholder iframe {
+  display: block;
+  width: 100%;
 }

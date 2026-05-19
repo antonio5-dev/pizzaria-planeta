@@ -1,7 +1,37 @@
-/* ==== About ==== */
-.about-section p {
-    max-width: 800px;
-    margin: 0 auto 1rem;
-    text-align: center;
+.about {
+  padding: 100px 20px;
 
+  background-image:
+  linear-gradient(rgba(0,0,0,0.6),
+  rgba(0,0,0,0.6)),
+  url("/images/pizz1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+.about-content {
+  max-width: 800px;
+
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 40px;
+
+  margin-bottom: 20px;
+
+  color: #ffffff;
+}
+
+.about p {
+  font-size: 20px;
+
+  line-height: 1.8;
+
+  color: #cbd5e1;
 }

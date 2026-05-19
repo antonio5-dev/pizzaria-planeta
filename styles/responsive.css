@@ -1,14 +1,57 @@
-/* ==== Responsividade ==== */
 @media (max-width: 768px) {
-    .header-inner {
-        flex-direction: column;
-        gap: .5rem;
-    }
-    .nav ul {
-        flex-direction: column;
-        gap: .5rem;
-    }
-    .hero h1 {
-        font-size: 2.2rem;
-    }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .services h2 {
+    font-size: 28px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .menu {
+  flex-wrap: wrap;
+
+  justify-content: center;
+  }
+
+  .logo {
+  font-size: 24px;
+  }
+
+  .menu-toggle {
+
+  display: block;
+  }
+
+  .menu {
+
+  display: none;
+
+  flex-direction: column;
+
+  background: #111111;
+
+  position: absolute;
+
+  top: 80px;
+
+  right: 20px;
+
+  padding: 20px;
+
+  border-radius: 12px;
+  }
+
+  .menu.active {
+
+  display: flex;
+  }
 }

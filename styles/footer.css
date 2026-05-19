@@ -1,15 +1,11 @@
-/* ==== Footer ==== */
-.site-footer {
-    background-color: var(--cor-primaria);
-    color: var(--cor-branco);
-    padding: 1rem 0;
-    text-align: center;
-    font-size: .9rem;
-}
-.site-footer a {
-    color: var(--cor-acento);
-    text-decoration: none;
-}
-.site-footer a:hover {
-    text-decoration: underline;
+footer {
+  background: #ff0000;
+
+  text-align: center;
+
+  padding: 30px 20px;
+
+  color: #fffeb7;
+
+  margin-top: 50px;
 }

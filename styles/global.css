@@ -1,43 +1,45 @@
-/* ==== Variáveis de cores ==== */
-:root {
-    --cor-primaria: #f2350f;      /* Vermelho escuro (pizza tradicional) */
-    --cor-secundaria: #e65100;    /* Laranja queimado (energia) */
-    --cor-acento: #ffb300;        /* Amarelo dourado (ingredientes frescos) */
-    --cor-fundo: #fde99f;         /* Fundo neutro */
-    --cor-texto: #333333;         /* Texto principal */
-    --cor-branco: #ffffff;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* ==== Reset básico ==== */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-/* ==== Tipografia ==== */
 body {
-    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    color: var(--cor-texto);
-    background-color: var(--cor-fundo);
+  background: #ffe482;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
 }
 
-/* ==== Layout geral ==== */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+button {
+  background: #37a504;
+  color: rgb(255, 255, 255);
+
+  border: none;
+
+  padding: 15px 30px;
+
+  border-radius: 30px;
+
+  font-size: 18px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
 }
 
-/* ==== Seções (geral) ==== */
-section {
-    padding: 4rem 0;
+button:hover {
+  transform: scale(1.05);
+
+  box-shadow: 0 0 15px #25d366;
 }
-section h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: var(--cor-primaria);
+
+img {
+  width: 100%;
+
+  max-width: 700px;
+
+  border-radius: 20px;
+
+  margin-bottom: 30px;
 }
