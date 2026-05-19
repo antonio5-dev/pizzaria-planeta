@@ -8,15 +8,3 @@ hamburger.addEventListener('click', () => {
     mainNav.classList.toggle('open');
 
 });
-
-document.querySelectorAll('.nav-link').forEach(link => {
-
-    link.addEventListener('click', () => {
-
-        hamburger.classList.remove('open');
-
-        mainNav.classList.remove('open');
-
-    });
-
-});
