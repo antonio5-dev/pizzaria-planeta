@@ -1,22 +1,22 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Smooth scroll para âncoras internas
-    const links = document.querySelectorAll('a[href^="#"]');
-    links.forEach(link => {
-        link.addEventListener('click', e => {
-            e.preventDefault();
-            const target = document.querySelector(link.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth' });
-            }
-        });
-    });
+const hamburger = document.getElementById('hamburger');
+const mainNav = document.getElementById('main-nav');
 
-    // Exemplo de toggle de menu mobile (caso exista)
-    const navToggle = document.querySelector('.nav-toggle');
-    if (navToggle) {
-        navToggle.addEventListener('click', () => {
-            document.body.classList.toggle('nav-open');
-        });
-    }
+hamburger.addEventListener('click', () => {
+
+    hamburger.classList.toggle('open');
+
+    mainNav.classList.toggle('open');
+
 });
 
+document.querySelectorAll('.nav-link').forEach(link => {
+
+    link.addEventListener('click', () => {
+
+        hamburger.classList.remove('open');
+
+        mainNav.classList.remove('open');
+
+    });
+
+});
