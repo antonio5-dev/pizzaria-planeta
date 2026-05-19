@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="/styles/hero.css">
     <link rel="stylesheet" href="/styles/menu.css">
     <link rel="stylesheet" href="/styles/about.css">
-    <link rel="stylesheet" href="/styles/contact.css">
+    <link rel="stylesheet" href="/styles/local.css">
     <link rel="stylesheet" href="/styles/footer.css">
     <link rel="stylesheet" href="/styles/responsive.css">
 
@@ -30,7 +30,7 @@
             left: 0;
             width: 100%;
             z-index: 1000;
-            background: rgba(15, 10, 5, 0.92);
+            background: rgba(246, 0, 0, 0.953);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
@@ -38,7 +38,7 @@
         }
 
         .site-header.scrolled {
-            background: rgba(10, 5, 0, 0.97);
+            background: rgba(247, 92, 36, 0.97);
             box-shadow: 0 2px 30px rgba(0, 0, 0, 0.6);
         }
 
@@ -74,7 +74,7 @@
         }
 
         .nav ul li a:hover {
-            color: #ff7a20;
+            color: #fffb20;
         }
 
         /* ── HAMBURGER BUTTON ── */
@@ -123,43 +123,74 @@
             transform: translateY(-7px) rotate(-45deg);
         }
 
-        /* ── MOBILE NAV OVERLAY ── */
-        @media (max-width: 768px) {
-            .hamburger {
-                display: flex;
-            }
+        /* ───────── MOBILE MENU ───────── */
+@media (max-width: 768px) {
 
-            .nav {
-                position: fixed;
-                inset: 0;
-                background: rgba(10, 5, 0, 0.97);
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                z-index: 1050;
-                opacity: 0;
-                pointer-events: none;
-                transition: opacity 0.3s ease;
-            }
+    .hamburger {
+        display: flex;
+    }
 
-            .nav.open {
-                opacity: 1;
-                pointer-events: all;
-            }
+    .nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 75%;
+        max-width: 320px;
+        height: 100vh;
 
-            .nav ul {
-                flex-direction: column;
-                align-items: center;
-                gap: 2.5rem;
-            }
+        background: #ffffff;
 
-            .nav ul li a {
-                font-size: 1.6rem;
-                font-weight: 600;
-                letter-spacing: 0.06em;
-            }
-        }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        transition: right 0.35s ease;
+
+        z-index: 1050;
+
+        box-shadow: -10px 0 30px rgba(0,0,0,0.15);
+    }
+
+    .nav.open {
+        right: 0;
+    }
+
+    .nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        width: 100%;
+        padding: 0 2rem;
+    }
+
+    .nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav ul li a {
+        display: block;
+
+        color: #111;
+
+        font-size: 1.2rem;
+        font-weight: 600;
+
+        padding: 1rem;
+
+        border-radius: 12px;
+
+        transition: background 0.2s ease,
+                    color 0.2s ease;
+    }
+
+    .nav ul li a:hover {
+        background: #f5f5f5;
+        color: #ff4d00;
+    }
+}
 
         /* ── WHATSAPP BUTTON ── */
         .btn-whatsapp {
@@ -228,7 +259,7 @@
                     <li><a href="#home"    class="nav-link">Início</a></li>
                     <li><a href="#menu"    class="nav-link">Cardápio</a></li>
                     <li><a href="#about"   class="nav-link">Sobre</a></li>
-                    <li><a href="#contact" class="nav-link">Contato</a></li>
+                    <li><a href="#local" class="nav-link">Localização</a></li>
                 </ul>
             </nav>
         </div>
@@ -337,7 +368,7 @@
     </section>
 
     <!-- CONTATO -->
-    <section id="contact" class="contact-section">
+    <section id="local" class="local-section">
         <div class="container">
             <h2>Localização</h2>
             
