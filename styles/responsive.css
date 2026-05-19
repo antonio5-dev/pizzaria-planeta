@@ -1,0 +1,14 @@
+/* ==== Responsividade ==== */
+@media (max-width: 768px) {
+    .header-inner {
+        flex-direction: column;
+        gap: .5rem;
+    }
+    .nav ul {
+        flex-direction: column;
+        gap: .5rem;
+    }
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+}

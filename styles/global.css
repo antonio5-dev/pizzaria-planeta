@@ -1,0 +1,43 @@
+/* ==== Variáveis de cores ==== */
+:root {
+    --cor-primaria: #f2350f;      /* Vermelho escuro (pizza tradicional) */
+    --cor-secundaria: #e65100;    /* Laranja queimado (energia) */
+    --cor-acento: #ffb300;        /* Amarelo dourado (ingredientes frescos) */
+    --cor-fundo: #fde99f;         /* Fundo neutro */
+    --cor-texto: #333333;         /* Texto principal */
+    --cor-branco: #ffffff;
+}
+
+/* ==== Reset básico ==== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ==== Tipografia ==== */
+body {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+}
+
+/* ==== Layout geral ==== */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ==== Seções (geral) ==== */
+section {
+    padding: 4rem 0;
+}
+section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--cor-primaria);
+}

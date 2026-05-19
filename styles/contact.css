@@ -1,0 +1,16 @@
+/* ==== Contact ==== */
+.contact-section a {
+    color: var(--cor-secundaria);
+    text-decoration: none;
+}
+.contact-section a:hover {
+    text-decoration: underline;
+}
+.map-placeholder {
+    margin-top: 2rem;
+    text-align: center;
+}
+.map-placeholder img {
+    max-width: 100%;
+    border-radius: 8px;
+}

@@ -1,0 +1,29 @@
+/* ==== Header ==== */
+.site-header {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+    padding: 1rem 0;
+}
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    max-height: 50px;
+}
+
+/* Navegação */
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+.nav a {
+    color: var(--cor-branco);
+    text-decoration: none;
+    font-weight: 600;
+}
+.nav a:hover {
+    color: var(--cor-acento);
+}
