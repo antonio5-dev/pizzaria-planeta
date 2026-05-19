@@ -1,9 +1,4 @@
 /* ==== Header ==== */
-.site-header {
-    background-color: var(--cor-primaria);
-    color: var(--cor-branco);
-    padding: 1rem 0;
-}
 .header-inner {
     display: flex;
     align-items: center;
@@ -26,4 +21,9 @@
 }
 .nav a:hover {
     color: var(--cor-acento);
+}
+
+/* push page content below fixed header */
+body {
+    padding-top: 64px;
 }
