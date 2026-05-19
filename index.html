@@ -132,8 +132,8 @@
 
     .nav {
         position: fixed;
-        top: 0;
-        right: -100%;
+        top: -100%;
+        left: 0;
         width: 75%;
         max-width: 320px;
         height: 100vh;
@@ -145,7 +145,7 @@
         justify-content: center;
         align-items: center;
 
-        transition: right 0.35s ease;
+        transition: top 0.35s ease;
 
         z-index: 1050;
 
@@ -153,7 +153,7 @@
     }
 
     .nav.open {
-        right: 0;
+        top: 0;
     }
 
     .nav ul {
