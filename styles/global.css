@@ -10,8 +10,24 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+a {
+
+  text-decoration: none;
+
+  color: inherit;
+}
+
 button {
-  background: #37a504;
+  display: flex;
+  
+  flex-direction: column;
+
+  justify-content: center;
+  
+  align-items: center;
+
+  background: #ff0000;
+  
   color: rgb(255, 255, 255);
 
   border: none;
@@ -26,12 +42,13 @@ button {
 
   transition: 0.3s;
 
+  margin-top: 50px;
 }
 
 button:hover {
   transform: scale(1.05);
 
-  box-shadow: 0 0 15px #25d366;
+  box-shadow: 0 0 15px #ff2626;
 }
 
 img {
@@ -43,3 +60,13 @@ img {
 
   margin-bottom: 30px;
 }
+
+.hero-buttons a {
+
+  text-decoration: none;
+
+  color: inherit;
+}
+
+
+

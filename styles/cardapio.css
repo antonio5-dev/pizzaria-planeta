@@ -1,0 +1,337 @@
+/* =========================================
+   CARDÁPIO
+========================================= */
+
+html,
+body {
+
+  margin: 0;
+
+  padding: 0;
+
+  overflow-x: hidden;
+
+  background: #ffe482;
+
+  font-family: Arial, sans-serif;
+}
+
+/* MAIN */
+
+.menu-page {
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  padding-top: 130px;
+
+  padding-left: 20px;
+
+  padding-right: 20px;
+
+  padding-bottom: 80px;
+
+  box-sizing: border-box;
+}
+
+/* TÍTULO */
+
+.menu-title {
+
+  width: 100%;
+
+  text-align: center;
+
+  margin-bottom: 60px;
+}
+
+.menu-title h1 {
+
+  font-size: 48px;
+
+  color: #ff0000;
+
+  margin-bottom: 12px;
+}
+
+.menu-title p {
+
+  font-size: 20px;
+
+  color: #ff2a00;
+}
+
+/* GRID */
+
+.pizza-grid {
+
+  width: 100%;
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+  gap: 30px;
+}
+
+/* CARD */
+
+.pizza-card {
+
+  background: #ffdc5c;
+
+  border-radius: 20px;
+
+  padding: 30px;
+
+  box-sizing: border-box;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+
+  transition: 0.3s;
+}
+
+.pizza-card:hover {
+
+  transform: translateY(-8px);
+
+  box-shadow: 0 0 20px #ff6363;
+}
+
+/* CONTEÚDO */
+
+.pizza-content {
+
+  display: flex;
+
+  flex-direction: column;
+
+  height: 100%;
+}
+
+/* TÍTULO DO SABOR */
+
+.pizza-content h3 {
+
+  text-align: center;
+
+  color: #ff0000;
+
+  font-size: 30px;
+
+  margin-bottom: 16px;
+}
+
+/* DESCRIÇÃO */
+
+.pizza-content p {
+
+  text-align: center;
+
+  color: #ff2a00;
+
+  line-height: 1.6;
+
+  margin-bottom: 25px;
+
+  min-height: 72px;
+}
+
+/* PREÇOS */
+
+.prices {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+
+  margin-bottom: 25px;
+}
+
+.price-item {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  background: #ffe88b;
+
+  padding: 14px 16px;
+
+  border-radius: 12px;
+
+  color: #ff0000;
+
+  font-size: 17px;
+
+  font-weight: bold;
+}
+
+/* BOTÃO */
+
+.button-whatsapp {
+
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-decoration: none;
+
+  background: #37a504;
+
+  color: white;
+
+  padding: 14px;
+
+  border-radius: 30px;
+
+  font-size: 18px;
+
+  font-weight: bold;
+
+  transition: 0.3s;
+
+  box-sizing: border-box;
+
+  text-decoration: none;
+}
+
+.button-whatsapp:hover {
+
+  transform: scale(1.03);
+
+  box-shadow: 0 0 15px #25d366;
+}
+
+/* FOOTER */
+
+footer {
+
+  margin-top: 0;
+}
+
+/* =========================================
+   RESPONSIVO
+========================================= */
+
+@media (max-width: 992px) {
+
+  .pizza-grid {
+
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+
+  .menu-page {
+
+    padding-top: 120px;
+
+    padding-left: 16px;
+
+    padding-right: 16px;
+  }
+
+  .menu-title {
+
+    margin-bottom: 40px;
+  }
+
+  .menu-title h1 {
+
+    font-size: 36px;
+  }
+
+  .menu-title p {
+
+    font-size: 18px;
+  }
+
+  .pizza-grid {
+
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .pizza-card {
+
+    padding: 24px;
+  }
+
+  .pizza-content h3 {
+
+    font-size: 26px;
+  }
+
+  .pizza-content p {
+
+    font-size: 16px;
+
+    min-height: auto;
+  }
+
+  .price-item {
+
+    font-size: 16px;
+  }
+  
+}
+
+@media (max-width: 480px) {
+
+  .menu-page {
+
+    padding-top: 110px;
+
+    padding-left: 12px;
+
+    padding-right: 12px;
+
+    padding-bottom: 60px;
+  }
+
+  .menu-title h1 {
+
+    font-size: 30px;
+  }
+
+  .menu-title p {
+
+    font-size: 16px;
+  }
+
+  .pizza-card {
+
+    padding: 20px;
+
+    border-radius: 16px;
+  }
+
+  .pizza-content h3 {
+
+    font-size: 24px;
+  }
+
+  .price-item {
+
+    padding: 12px 14px;
+
+    font-size: 15px;
+  }
+
+}

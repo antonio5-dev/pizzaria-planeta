@@ -35,3 +35,27 @@
 
   color: #cbd5e1;
 }
+
+.about-social {
+  display: flex;
+  
+  gap: 50px;
+  
+  justify-content: center;
+  
+  margin-top: 10px;
+}
+
+.about-social a {
+  font-size: 50px;
+  
+  color: white;
+
+  transition: 0.3;
+}
+
+.about-social a:hover {
+  color: rgb(254, 246, 139);
+  
+  transform: scale(1.5);
+}
