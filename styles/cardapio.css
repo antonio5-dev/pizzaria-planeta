@@ -13,7 +13,7 @@ body {
 
   background: #ffe482;
 
-  font-family: Arial, sans-serif;
+  font-family: Patrick Hand, sans-serif;
 }
 
 /* MAIN */
@@ -57,7 +57,7 @@ body {
 
 .menu-title p {
 
-  font-size: 20px;
+  font-size: 30px;
 
   color: #ff2a00;
 }
@@ -140,6 +140,8 @@ body {
   margin-bottom: 25px;
 
   min-height: 72px;
+
+  font-size: 20px;
 }
 
 /* PREÇOS */
@@ -171,7 +173,7 @@ body {
 
   color: #ff0000;
 
-  font-size: 17px;
+  font-size: 20px;
 
   font-weight: bold;
 }

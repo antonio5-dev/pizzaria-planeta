@@ -1,30 +1,22 @@
 .local {
   padding: 100px 20px;
-
   background: #ffe482;
 
 }
 
 .local h2 {
   font-size: 40px;
-
   margin-bottom: 20px;
-
   color: #ff0000;
-
   text-align: center;
 }
 
 .local p {
-  font-size: 20px;
-
+  font-size: 30px;
   line-height: 1.8;
-
   color: #ff0000;
-
   text-align: center;
-
-  margin-bottom: 10px;
+  margin-bottom: 40px;
 }
 
 .map-placeholder {

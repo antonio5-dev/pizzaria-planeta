@@ -14,6 +14,16 @@ const sendChat = document.getElementById("send-chat");
 const chatInput = document.getElementById("chat-input");
 const chatMessages = document.getElementById("chatbot-messages");
 
+chatInput.addEventListener("keydown", (event) => {
+
+    if (event.key === "Enter") {
+
+        sendChat.click();
+
+    }
+
+});
+
 sendChat.addEventListener("click", () => {
 
     const mensagem = chatInput.value;
@@ -27,8 +37,8 @@ sendChat.addEventListener("click", () => {
 
     novaMensagem.textContent = mensagem;
 
-    novaMensagem.style.background = "#272727";
-    novaMensagem.style.color = "white";
+    novaMensagem.style.background = "white";
+    novaMensagem.style.color = "black";
     novaMensagem.style.padding = "10px";
     novaMensagem.style.marginBottom = "10px";
     novaMensagem.style.borderRadius = "10px";
@@ -36,6 +46,8 @@ sendChat.addEventListener("click", () => {
     novaMensagem.style.marginLeft = "auto";
 
     chatMessages.appendChild(novaMensagem);
+
+    chatMessages.scrollTop = chatMessages.scrollHeight;
 
     // limpa input
     chatInput.value = "";
@@ -45,15 +57,16 @@ sendChat.addEventListener("click", () => {
 
         const respostaBot = document.createElement("div");
 
-        let resposta = "";
+        let resposta = "Obrigado pelo Contato!";
 
 if (
     mensagem.toLowerCase().includes("preços") ||
+    mensagem.toLowerCase().includes("preço") ||
     mensagem.toLowerCase().includes("cardápio")
 ) {
 
     resposta =
-    "Acesse a sessão Cardápio aqui em nosso Site e confira nossos Sabores e Preços! 😄";
+    "Acesse a sessão Cardápio aqui em nosso site e confira nossos preços! 😄";
 
 }
 
@@ -69,6 +82,7 @@ else if (
 
 else if (
     mensagem.toLowerCase().includes("localização") ||
+    mensagem.toLowerCase().includes("local") ||
     mensagem.toLowerCase().includes("endereço")
 ) {
 
@@ -86,13 +100,16 @@ else {
 
 respostaBot.textContent = resposta;
 
-        respostaBot.style.background = "black";
+        respostaBot.style.background = "white";
         respostaBot.style.padding = "10px";
         respostaBot.style.marginBottom = "10px";
         respostaBot.style.borderRadius = "10px";
         respostaBot.style.width = "fit-content";
+        respostaBot.style.color = "black";
 
         chatMessages.appendChild(respostaBot);
+
+        chatMessages.scrollTop = chatMessages.scrollHeight;
 
     }, 500);
 

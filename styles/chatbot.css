@@ -19,8 +19,8 @@
 }
 
 .chatbot-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px #ff0000;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ff0000;
 
 }  
 
@@ -29,7 +29,7 @@
     bottom: 90px;
     right: 20px;
     width: 320px;
-    background: #000000;
+    background: #ffe482;
     border-radius: 15px;
     display: none;
     flex-direction: column;
@@ -38,7 +38,7 @@
 
 .chatbot-header {
     background: #ff2a00;
-    color: rgb(255, 255, 255);
+    color: white;
     padding: 15px;
     display: flex;
     justify-content: space-between;
@@ -47,7 +47,7 @@
 .chatbot-messages {
     height: 300px;
     padding: 15px;
-    background: #000000;
+    background: #ffe482;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
@@ -59,6 +59,7 @@
 }
 
 .chatbot-input-area input {
+    margin-top: auto;
     flex: 1;
     padding: 10px;
 }
@@ -68,4 +69,12 @@
     color: rgb(255, 255, 255);
     border: none;
     padding: 10px;
+    margin-top: 0;
+}
+
+.message.bot {
+  background: white;
+  color: black;
+  padding: 15px;
+  border-radius: 10px;
 }
